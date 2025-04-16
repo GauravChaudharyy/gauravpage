@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaurav's Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#6366f1",
+            secondary: "#f59e0b",
+          },
+          borderRadius: {
+            none: "0px",
+            sm: "4px",
+            DEFAULT: "8px",
+            md: "12px",
+            lg: "16px",
+            xl: "20px",
+            "2xl": "24px",
+            "3xl": "32px",
+            full: "9999px",
+            button: "8px",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    :where([class^="ri-"])::before {
+      content: "\f3c2";
+    }
+
+    .project-card:hover .project-overlay {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .project-overlay {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      transform: translateY(-3px);
+      transition: transform 0.2s ease;
+    }
+  </style>
+</head>
+
+<body class="font-['Inter'] bg-white">
+  <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <a href="#" class="font-['Pacifico'] text-2xl text-primary">Gaurav</a>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#projects" class="text-gray-700 hover:text-primary transition-colors">Projects</a>
+          <a href="#about" class="text-gray-700 hover:text-primary transition-colors">About</a>
+          <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+          <button
+            class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap cursor-pointer">
+            <a href="gauravchaudharyresume.pdf" download="gauravchaudharyresume.pdf">Resume</a>
+          </button>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button class="text-gray-700 hover:text-primary cursor-pointer">
+            <i class="ri-menu-line text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="pt-32 pb-20 relative overflow-hidden bg-gradient-to-r from-indigo-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="flex-1">
+          <h1 class="text-5xl font-bold text-gray-900 mb-6">
+            Creative Designer & <span class="text-primary">Developer</span>
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Hi, I am Gaurav Chaudhary, and I am Web Designer & Developer.
+          </p>
+          <div class="flex gap-4">
+            <button
+              class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap cursor-pointer">
+              <a href="https://github.com/GauravChaudharyy">Github</a>
+            </button>
+            <button
+              class="border border-gray-300 text-gray-700 px-8 py-3 !rounded-button hover:border-primary hover:text-primary transition-colors whitespace-nowrap cursor-pointer">
+              <a href="https://www.linkedin.com/in/gaurav-chaudhary-a4157032a/">Linkedin</a>
+            </button>
+          </div>
+        </div>
+        <div class="flex-1">
+          <img src="picc.png" alt="Hero Image" style="width: 500px; height: 450px;" class="rounded-2xl shadow-2xl"/>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="projects" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Featured Projects
+        </h2>
+        <p class="text-xl text-gray-600">A selection of my recent work</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="project-card relative rounded-xl overflow-hidden cursor-pointer">
+          <img src="https://public.readdy.ai/ai/img_res/b8ff3ae3f407bf9a7bda8f167f91de3c.jpg" alt="Paying Guest Website"
+            class="w-full h-full object-cover" />
+          <div class="project-overlay absolute inset-0 bg-black/80 p-6 flex flex-col justify-end">
+            <h3 class="text-xl font-semibold text-white mb-2">
+              E-commerce Platform
+            </h3>
+            <p class="text-gray-300 mb-4">
+              A modern e-commerce platform with seamless user experience and
+              robust backend.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-white/20 text-white px-3 py-1 rounded-full text-sm">React</span>
+              <span class="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Node.js</span>
+              <span class="bg-white/20 text-white px-3 py-1 rounded-full text-sm">MongoDB</span>
+            </div>
+            <button
+              class="bg-white text-gray-900 px-6 py-2 !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap w-fit">
+              View Project
+            </button>
+          </div>
+        </div>
+        <div class="project-card relative rounded-xl overflow-hidden cursor-pointer">
+          <img src="https://public.readdy.ai/ai/img_res/ce4b01ac63194201f5c1389deacdabaf.jpg" alt="Fitness App"
+            class="w-full h-full object-cover" />
+          <div class="project-overlay absolute inset-0 bg-black/80 p-6 flex flex-col justify-end">
+            <h3 class="text-xl font-semibold text-white mb-2">
+              Fitness Tracking App
+            </h3>
+            <p class="text-gray-300 mb-4">
+              Mobile application for tracking fitness goals and daily
+              activities.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Flutter</span>
+              <span class="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Firebase</span>
+              <span class="bg-white/20 text-white px-3 py-1 rounded-full text-sm">GraphQL</span>
+            </div>
+            <button
+              class="bg-white text-gray-900 px-6 py-2 !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap w-fit">
+              View Project
+            </button>
+          </div>
+        </div>
+        <div class="project-card relative rounded-xl overflow-hidden cursor-pointer">
+          <img src="https://public.readdy.ai/ai/img_res/6c16fac8b357f8410b84eb5ff6a32f4e.jpg" alt="Analytics Dashboard"
+            class="w-full h-full object-cover" />
+          <div class="project-overlay absolute inset-0 bg-black/80 p-6 flex flex-col justify-end">
+            <h3 class="text-xl font-semibold text-white mb-2">
+              Analytics Dashboard
+            </h3>
+            <p class="text-gray-300 mb-4">
+              Real-time analytics dashboard for business intelligence.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Vue.js</span>
+              <span class="bg-white/20 text-white px-3 py-1 rounded-full text-sm">D3.js</span>
+              <span class="bg-white/20 text-white px-3 py-1 rounded-full text-sm">AWS</span>
+            </div>
+            <button
+              class="bg-white text-gray-900 px-6 py-2 !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap w-fit">
+              View Project
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="flex-1">
+          <img src="https://public.readdy.ai/ai/img_res/387e35db625a1f0126ea26b5a25642af.jpg" alt="Profile Picture"
+            class="rounded-2xl shadow-xl" />
+        </div>
+        <div class="flex-1">
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">About Me</h2>
+          <p class="text-gray-600 mb-6">
+            Hi, I'm Gaurav, a passionate designer and developer with a knack
+            for creating beautiful and functional digital experiences. I
+            specialize in UI/UX design, web development, and mobile app
+            development. My goal is to bring your ideas to life with
+            innovative solutions that engage and inspire users.
+          </p>
+          <p class="text-gray-600 mb-8">
+            I specialize in user-centered design principles and modern
+            development frameworks, always staying updated with the latest
+            industry trends and technologies.
+          </p>
+          <div class="flex flex-wrap gap-3 mb-8">
+            <span class="bg-white px-4 py-2 rounded-full text-gray-700 shadow-sm">UI/UX Design</span>
+            <span class="bg-white px-4 py-2 rounded-full text-gray-700 shadow-sm">Web Development</span>
+            <span class="bg-white px-4 py-2 rounded-full text-gray-700 shadow-sm">Mobile Apps</span>
+            <span class="bg-white px-4 py-2 rounded-full text-gray-700 shadow-sm">Brand Identity</span>
+          </div>
+          <button
+            class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap cursor-pointer">
+            <a href="gauravchaudharyresume.pdf" download="gauravchaudharyresume.pdf">Download Resume</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Let's Connect</h2>
+        <p class="text-xl text-gray-600">
+          Have a project in mind? Let's talk about it.
+        </p>
+      </div>
+      <form class="space-y-6">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+          <input type="text"
+            class="w-full px-4 py-3 rounded border-gray-300 focus:border-primary focus:ring focus:ring-primary/20 transition-colors"
+            placeholder="Your name" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+          <input type="email"
+            class="w-full px-4 py-3 rounded border-gray-300 focus:border-primary focus:ring focus:ring-primary/20 transition-colors"
+            placeholder="your@email.com" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+          <textarea
+            class="w-full px-4 py-3 rounded border-gray-300 focus:border-primary focus:ring focus:ring-primary/20 transition-colors"
+            rows="5" placeholder="Tell me about your project"></textarea>
+        </div>
+        <button type="submit"
+          class="w-full bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap cursor-pointer">
+          Send Message
+        </button>
+      </form>
+      <div class="mt-12 flex justify-center space-x-6">
+        <a href="https://www.linkedin.com/in/gaurav-chaudhary-a4157032a/"
+          class="social-icon w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition-colors cursor-pointer">
+          <i class="ri-linkedin-fill text-xl text-gray-600"></i>
+        </a>
+        <a href="https://github.com/GauravChaudharyy"
+          class="social-icon w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition-colors cursor-pointer">
+          <i class="ri-github-fill text-xl text-gray-600"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-50 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <a href="#" class="font-['Pacifico'] text-2xl text-primary">Gaurav Chaudhary</a>
+        </div>
+        <div class="flex space-x-8 mb-6 md:mb-0">
+          <a href="#projects" class="text-gray-600 hover:text-primary transition-colors">Projects</a>
+          <a href="#about" class="text-gray-600 hover:text-primary transition-colors">About</a>
+          <a href="#contact" class="text-gray-600 hover:text-primary transition-colors">Contact</a>
+        </div>
+        <div class="text-gray-500 text-sm">Gaurav's Portfolio | © 2025 | All rights reserved</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const mobileMenuButton =
+        document.querySelector(".ri-menu-line").parentElement;
+      const nav = document.querySelector("nav");
+      let mobileMenu = null;
+
+      mobileMenuButton.addEventListener("click", function () {
+        if (!mobileMenu) {
+          mobileMenu = document.createElement("div");
+          mobileMenu.className =
+            "md:hidden absolute top-16 left-0 right-0 bg-white border-b border-gray-100";
+          mobileMenu.innerHTML = `
+                              <div class="flex flex-col p-4 space-y-4">
+                                  <a href="#projects" class="text-gray-700 hover:text-primary transition-colors">Projects</a>
+                                  <a href="#about" class="text-gray-700 hover:text-primary transition-colors">About</a>
+                                  <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+                                  <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+                                  Hire Me
+                                  </button>
+                              </div>
+                          `;
+          nav.appendChild(mobileMenu);
+        } else {
+          mobileMenu.remove();
+          mobileMenu = null;
+        }
+      });
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 64,
+              behavior: "smooth",
+            });
+            if (mobileMenu) {
+              mobileMenu.remove();
+              mobileMenu = null;
+            }
+          }
+        });
+      });
+
+      const form = document.querySelector("form");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+
+        const notification = document.createElement("div");
+        notification.className =
+          "fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded shadow-lg transform transition-transform duration-300 translate-y-0";
+        notification.textContent = "Message sent successfully!";
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+          notification.style.transform = "translateY(150%)";
+          setTimeout(() => notification.remove(), 300);
+        }, 3000);
+
+        form.reset();
+      });
+    });
+  </script>
+</body>
+
+</html>
